@@ -1,0 +1,344 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px 40px;
+    align-items: center;
+    background-color: #1F4B99;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: white;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.localization {
+    margin-left: 10px;
+    display: flex;
+}
+
+.lang_btn {
+    margin-left: 10px;
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.lang_btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+main {
+    color: #333;
+    background: #F5F7FA;
+}
+
+.buildings_choice {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+.buildings_choice h3 {
+    margin: 20px;
+    color: #0D2B4F;
+    font-size: 26px;
+    text-align: center;
+}
+
+.buildings_grid {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.building_card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.building_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card_image {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #7e71b1, #1F4B99);
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.card_image img {    
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s;
+    position: absolute;
+}
+
+.building_card:hover .card_image img {
+    transform: scale(1.05);
+}
+
+.building_number_overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.card_content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.building_title {
+    margin-bottom: 10px;
+    color: #0D2B4F;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.building_description {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #337BB7;
+    border-left: 4px solid #337BB7;
+}
+
+.building_address {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+    align-items: flex-start;
+    line-height: 1.5;
+    background: #F5F7FA;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    gap: 3px;
+}
+
+.building_address::before {
+    content: "📍";
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.btn_view {
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background: #337BB7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn_view:hover {
+    background: #1A4B8C;
+}
+
+footer {
+    padding: 40px 20px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    background-color: #333;
+}
+
+
+/* АДАПТАЦИЯ ПОД ПЛАНШЕТЫ */
+@media (max-width: 1600px) {
+
+    .buildings_choice {
+        width: 85%;
+    }
+
+    .buildings_grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .lang_btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .buildings_choice h3 {
+        width: 90%;
+        margin: 5px;
+        font-size: 22px;
+    }
+
+    .buildings_grid {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 20px;
+    }
+
+    .building_number_overlay {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        top: 8px;
+        right: 8px;
+    }
+
+    .building_title {
+        font-size: 18px;
+    }
+
+    .building_description {
+        font-size: 16px;
+    }
+
+    .building_address {
+        font-size: 14px;
+    }
+
+    .btn_view {
+        font-size: 18px;
+    }
+}
+
+/* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ */
+@media (max-width: 600px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .title {
+        padding: 10px;
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .localization {
+        display: grid;
+    }
+
+    .lang_btn {
+        padding: 5px 20px;
+        margin: 5px;
+        font-size: 16px;
+    }
+
+    .buildings_choice {
+        width: 95%;
+    }
+
+    .buildings_choice h3 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .buildings_grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .building_number_overlay {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        top: 6px;
+        right: 6px;
+    }
+
+    .building_title {
+        font-size: 18px;
+    }
+
+    .building_description {
+        font-size: 15px;
+    }
+
+    .building_address {
+        font-size: 14px;
+        gap: 4px;
+    }
+
+    .btn_view {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    footer {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+@media (max-width: 400px) {
+    .title, .buildings_choice h3, .building_title {
+        font-size: 16px;
+    }
+
+    .lang_btn, .building_description {
+        font-size: 14px;
+    }
+
+    .btn_view {
+        font-size: 15px;
+    }
+}

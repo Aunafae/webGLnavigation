@@ -1,0 +1,831 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary_color: #1A4B8C;
+    --accent_color: #4A90E2;
+    --bg_panel: #2D2D3A;
+    --border_color: #3A3A4A;
+}
+
+body {
+    height: 100%;
+    background: #1E1E2E;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header, footer {
+    padding: 10px 20px;
+    background: var(--bg_panel);
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+header {
+    align-items: center;
+    border-bottom: 2px solid var(--primary_color);
+}
+
+footer {
+    padding: 10px;
+    border-top: 2px solid var(--primary_color);
+}
+
+.back_button {
+    padding: 7px 20px;
+    font-size: 16px;
+    color: white;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--border_color);
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.back_button:hover, .lang_btn:hover, .instruction:hover {
+    background: var(--primary_color);
+    border-color: var(--primary_color);
+}
+
+.building_title h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.auxiliary_container, .connection_status, .localization {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #FFAA00;
+}
+
+.connection_status.connected .dot {
+    background: #4A90E2;
+    box-shadow: 0 0 10px #4caf50;
+}
+
+.connection_status {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.status_text {
+    padding: 10px;
+}
+
+.localization {
+    margin: 0 10px;
+}
+
+.instruction, .lang_btn {
+    margin: 5px;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.instruction {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    padding: 0px;
+    margin: 0 10px;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.instruction_tooltip {
+    position: absolute;
+    top: 60px;
+    right: 120px;
+    background: var(--bg_panel);
+    border: 1px solid var(--accent_color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.instruction_tooltip.hidden {
+    display: none;
+}
+
+.tooltip_content {
+    color: white;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.viewport {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#glcanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.loading_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+    z-index: 3;
+}
+
+.loading_overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    border: 5px solid var(--border_color);
+    border-top-color: var(--accent_color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#loadingMessage {
+    font-size: 20px;
+    color: white;
+}
+
+.camera_controls_panel {
+    position: absolute;
+    bottom: 35px;
+    right: 40px;
+    display: flex;
+    z-index: 2;
+}
+
+.control_btn {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+    background: var(--bg_panel);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border_color);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control_btn:hover {
+    background: var(--primary_color);
+    transform: scale(1.1);
+    border-color: var(--accent_color);
+}
+
+footer {
+    padding: 20px 40px;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.model_functions, .floors, .search_room, .route_builder {
+    display: grid;
+}
+
+.panel_functions {
+    width: 20%;
+}
+
+.panel_floors {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel_search, .panel_route {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel_route {
+    align-items: flex-end;
+}
+
+.toggle_group, .floors_buttons, .search_box, .route_inputs {
+    display: flex;
+}
+
+.search_box, .route_inputs {
+    margin-bottom: 7px;
+    position: relative;
+    gap: 5px;
+}
+
+.search_room {
+    width: 80%;
+}
+
+.route_builder {
+    width: 90%;
+}
+
+.search_room input, .route_builder input {
+    width: 100%;
+}
+
+.toggle_group {
+    margin-top: 5px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.toggle_item {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.toggle_item input[type="checkbox"] {
+    display: none;
+}
+
+.toggle_switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    background: #555;
+    border-radius: 10px;
+    transition: background 0.3s;
+    flex-shrink: 0;
+}
+
+.toggle_item input:checked + .toggle_switch {
+    background: var(--accent_color);
+}
+
+.toggle_switch::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle_item input:checked + .toggle_switch::before {
+    transform: translateX(25px);
+}
+
+.floor_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.floor_btn {
+    height: 40px; 
+    width: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    border: 1px solid var(--border_color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.floor_btn:hover {
+    background: var(--primary_color);
+    border-color: var(--accent_color);
+}
+
+.floor_btn.active {
+    background: var(--accent_color);
+    border-color: var(--accent_color);
+}
+
+.panel_section h4 {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: var(--accent_color);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.route_builder label {
+    width: 60px;
+    margin-right: 10px;
+    color: var(--accent_color);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.panel_section input {
+    padding: 8px 10px;
+    font-size: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    border: 1px solid var(--border_color);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent_color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.search_btn, .route_btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search_btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon_flip {
+    font-size: 25px;
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+.route_buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.route_btn {
+    width: 49%;
+}
+
+.primary {
+    background: var(--accent_color);
+}
+
+.primary:hover {
+    background: var(--primary_color);
+}
+
+.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border_color);
+}
+
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.door_info {
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.door_info.hidden {
+    display: none;
+}
+
+.route_info.hidden {
+        display: none !important;
+    }
+
+.door {
+    padding: 5px;
+}
+
+.door strong {
+    color: var(--accent_color);
+}
+
+.autocomplete_dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 150px;
+    margin-top: 5px;
+    overflow-y: auto;
+    background: var(--bg_panel);
+    border: 1px solid var(--border_color);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 5;
+}
+
+.autocomplete_dropdown.visible {
+    display: block;
+}
+
+.autocomplete_item {
+    padding: 10px 12px;
+    color: white;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border_color);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.autocomplete_item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete_item:hover {
+    background: var(--primary_color);
+}
+
+.autocomplete_item.selected {
+    background: var(--accent_color);
+}
+
+.autocomplete_item .door_number {
+    margin-right: 5px;
+    color: var(--accent_color);
+    font-weight: bold;
+}
+
+.autocomplete_item .door_description, .autocomplete_item .door_description {
+    color: #AAA;
+}
+
+.autocomplete_item:hover .door_number, .autocomplete_item:hover .door_floor {
+    color: white;
+}
+
+/* АДАПТАЦИЯ ПОД ПЛАНШЕТЫ */
+@media (max-width: 1300px) {
+    footer {
+        height: 30%;
+        padding: 15px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-height: 40vh;
+        overflow-y: auto;
+    }
+    
+    .panel_section {
+        width: 100% !important;
+        align-items: flex-start !important;
+    }
+    
+    .panel_functions {
+        order: 3;
+    }
+    
+    .panel_floors {
+        order: 1;
+    }
+    
+    .panel_search {
+        order: 2;
+    }
+    
+    .panel_route {
+        order: 4;
+    }
+    
+    .search_room, .route_builder {
+        width: 90% !important;
+    }
+    
+    .floor_btn {
+        height: 35px;
+        width: 45px;
+    }
+    
+    .camera_controls_panel {
+        bottom: 15px;
+        right: 20px;
+    }
+    
+    .control_btn {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    
+    .instruction_tooltip {
+        top: 50px;
+        right: 90px;
+        font-size: 12px;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        padding: 8px 15px;
+    }
+    
+    .building_title h2 {
+        font-size: 16px;
+    }
+    
+    .back_button, .lang_btn {
+        font-size: 14px;
+    }
+    
+    .instruction {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+
+    .localization {
+        display: grid;
+        gap: 5px;
+    }
+
+    .lang_btn {
+        margin: 0;
+        padding: 2px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .building_title h2 {
+        font-size: 14px;
+    }
+    
+    .back_button, .connection_status, .instruction, .lang_btn {
+        font-size: 12px;
+    }
+    
+    .instruction {
+        width: 25px;
+        height: 25px;
+    }
+    
+    footer {
+        max-height: 25%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        overflow-y: auto;
+    }
+    
+    .panel_section h4 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .panel_functions {
+        order: 4;
+    }
+    
+    .panel_floors {
+        order: 1;
+    }
+    
+    .panel_search {
+        order: 2;
+    }
+    
+    .panel_route {
+        order: 3;
+    }
+    
+    .floor_buttons {
+        gap: 7px;
+    }
+    
+    .floor_btn {
+        height: 30px;
+        width: 45px;
+        font-size: 12px;
+    }
+    
+    .panel_section input, .route_btn {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+    
+    .toggle_item, .control_btn, .door_info, .route_info {
+        font-size: 14px;
+    }
+
+    .search_btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .autocomplete_dropdown {
+        max-height: 120px;
+    }
+    
+    .autocomplete_item {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .camera_controls_panel {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .instruction_tooltip {
+        min-width: 200px;
+        top: 45px;
+        right: 20px;
+        left: auto;
+        font-size: 12px;
+        padding: 10px 12px;
+        white-space: normal;
+    }
+    
+    .tooltip_content {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ */
+@media (max-width: 600px) {
+    header {
+        padding: 6px 8px;
+    }
+
+    .building_title h2, .instruction {
+        font-size: 12px;
+    }
+
+    .back_button {
+        font-size: 0px;
+        padding: 4px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .back_button::before {
+        content: "←";
+        font-size: 14px;
+    }
+
+    .connection_status {
+        margin: 2px;
+        font-size: 11px;
+    }
+
+    .status_text {
+        padding: 5px;
+    }
+
+    .localization {
+        margin: 0 5px;
+    }
+
+    .lang_btn {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floor_btn {
+        height: 28px;
+        width: 36px;
+        font-size: 11px;
+    }
+    
+    .toggle_item {
+        font-size: 12px;
+        gap: 5px;
+    }
+    
+    .toggle_switch {
+        width: 35px;
+        height: 16px;
+    }
+    
+    .toggle_item input:checked + .toggle_switch::before {
+        transform: translateX(17px);
+    }
+    
+    .toggle_switch::before {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .panel_section input {
+        padding: 5px 7px;
+        font-size: 12px;
+    }
+    
+    .search_btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .icon_flip {
+        font-size: 20px;
+    }
+    
+    .route_btn {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    .route_builder label {
+        width: 45px;
+        font-size: 11px;
+    }
+    
+    .camera_controls_panel {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .control_btn {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+    
+    .instruction_tooltip {
+        top: 40px;
+        right: 10px;
+        min-width: 180px;
+    }
+    
+    .tooltip_content {
+        font-size: 11px;
+    }
+    
+    .autocomplete_dropdown {
+        max-height: 100px;
+    }
+    
+    .autocomplete_item {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+}

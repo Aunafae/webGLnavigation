@@ -1,0 +1,138 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навигация система по корпусам ОГУ</title>
+    <link rel="stylesheet" href="css/viewer.css">
+</head>
+
+<body>
+    <header>
+        <button class="back_button" onclick="window.location.href = '/'"><!-- ← Назад к выбору корпуса --></button>
+        <div class="building_title" id="buildingTitle">
+            <h2><!-- Загрузка модели... --></h2>
+        </div>
+        <div class="auxiliary_container">
+            <div class="connection_status" id="connectionStatus">
+                <span class="dot"></span>
+                <span class="status_text" id="statusText"><!-- Подключение... --></span>
+            </div>
+            <button class="instruction" id="instructionBtn">?</button>
+            <div class="instruction_tooltip hidden" id="instructionTooltip">
+                <div class="tooltip_content">
+                    <!-- ЛКМ - вращение модели
+                    СКМ - перемещение модели
+                    Колёсико - масштабирование модели -->
+                </div>
+            </div>
+            <div class="localization">
+                <button class="lang_btn" id="langRu">Ru</button>
+                <button class="lang_btn" id="langEn">En</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="viewport">
+        <canvas id="glcanvas"></canvas>
+        <div class="loading_overlay" id="loadingOverlay">
+            <div class="spinner"></div>
+            <div id="loadingMessage"><!-- Загрузка 3D модели... --></div>
+        </div>
+        <div class="camera_controls_panel">
+            <button class="control_btn" id="btnReset" title="">
+                <span class="icon">⟲</span>
+            </button>
+            <button class="control_btn" id="btnFullscreen" title="">
+                <span class="icon">⛶</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- <button class="footer_toggle" id="footerToggle" title="Скрыть/показать панель">
+        <span class="toggle_arrow">▼</span>
+    </button> -->
+
+    <footer id="panelFooter">
+        <div class="panel_section panel_functions">
+            <div class="model_functions">
+                <h4><!-- Возможности модели --></h4>
+                <div class="toggle_group" id="modelFunctionsToggle">
+                    <!-- Тумблеры будут добавлены через JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="panel_section panel_floors">
+            <div class="floors">
+                <h4><!-- Этажи --></h4>
+                <div class="floor_buttons" id="floorButtons">
+                    <!-- Этажи будут добавлены через JS -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel_section panel_search">
+            <div class="search_room">
+                <h4><!-- Поиск помещения --></h4>
+                <div class="search_box">
+                    <input type="text" id="roomSearch" placeholder="" autocomplete="off">
+                    <button class="search_btn primary" id="searchBtn">
+                        <span class="icon icon_flip">⌕</span>
+                    </button>
+                    <button class="search_btn secondary" id="clearSearchBtn">
+                        <span class="icon">✕</span>
+                    </button>
+                    <div class="autocomplete_dropdown" id="roomSearchDropdown"></div>
+                </div>
+                <div class="door_info hidden" id="doorInfo"></div>
+            </div>
+        </div>
+
+        <div class="panel_section panel_route">
+            <div class="route_builder">
+                <h4><!-- Построение маршрута --></h4>
+                <div class="route_inputs">
+                    <label for="startPoint"><!-- Откуда: --></label>
+                    <input type="text" class="inputPoint" id="startPoint" placeholder="" autocomplete="off">
+                    <div class="autocomplete_dropdown" id="startPointDropdown"></div>
+                </div>
+                <div class="route_inputs">
+                    <label for="endPoint"><!-- Куда: --></label>
+                    <input type="text" class="inputPoint" id="endPoint" placeholder="" autocomplete="off">
+                    <div class="autocomplete_dropdown" id="endPointDropdown"></div>
+                </div>
+                <div class="route_info hidden" id="routeInfo"></div>
+                <div class="route_buttons">
+                    <button class="route_btn primary" id="buildRouteBtn"><!-- Построить маршрут --></button>
+                    <button class="route_btn secondary" id="clearRouteBtn"><!-- Очистить --></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="/js/translations.js"></script>
+<script src="/js/NavigationGraph.js"></script>
+<script src="/js/DoorSearch.js"></script>
+<script src="/js/DoorAutocomplete.js"></script>
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "/libs/three.module.js",
+        "three/addons/": "/libs/"
+    }
+}
+</script>
+
+<script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/OrbitControls.js';
+    
+    window.THREE = THREE;
+    window.OrbitControls = OrbitControls;
+</script>
+
+<script src="/js/ModelLoader.js"></script>
+<script src="/js/ModelGraphBuilder.js"></script>
+<script src="/js/SceneManager.js"></script>
+<script src="/js/viewer.js"></script>
