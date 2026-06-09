@@ -140,7 +140,7 @@ class ModelGraphBuilder {
     }
 
     async loadDoorInfo() {
-        const response = await fetch(`/models/${this.buildingId}/doors_metadata.json`);
+        const response = await fetch(`/models/${this.buildingId}/Doors_metadata.json`);
 
         const doorsData = await response.json();
 
