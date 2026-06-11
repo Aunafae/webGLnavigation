@@ -4,126 +4,84 @@
     "description_en": "Wardrobe"
   },
   "D6_0": {
-    "number": "100",
-    "description_ru": "Деканат",
-    "description_en": "Dean's room"
+    "number": "100"
   },
   "D6_1": {
-    "number": "101",
-    "description_ru": "Преподавательская",
-    "description_en": "Teaching staff"
+    "number": "101"
   },
   "D6_2": {
-    "number": "102",
-    "description_ru": "Преподавательская",
-    "description_en": "Teaching staff"
+    "number": "102"
   },
   "D6_3": {
-    "number": "103",
-    "description_ru": "Преподавательская",
-    "description_en": "Teaching staff"
+    "number": "103"
   },
   "D6_4": {
-    "number": "104",
-    "description_ru": "Учебно-методический отдел",
-    "description_en": "Educational and Methodical Department"
+    "number": "104"
   },
   "D6_5": {
-    "number": "105",
-    "description_ru": "Зав. кафедрой",
-    "description_en": "Head of the Department"
+    "number": "105"
   },
   "D6_6": {
-    "number": "106",
-    "description_ru": "Прикладная механика",
-    "description_en": "Applied mechanics"
+    "number": "106"
   },
   "D6_7": {
-    "number": "107",
-    "description_ru": "Основы проектирования и ДМ",
-    "description_en": "Fundamentals of design and DM"
+    "number": "107"
   },
   "D6_8": {
-    "number": "108",
-    "description_ru": "Преподавательская",
-    "description_en": "Teaching staff"
+    "number": "108"
   },
   "D6_9": {
-    "number": "109",
-    "description_ru": "Преподавательская",
-    "description_en": "Teaching staff"
+    "number": "109"
   },
   "D6_10": {
     "number": "144",
     "description_ru": "Туалет служебный",
-    "description_en": "Office toilet"
+    "description_en": "Staff toilet"
   },
   "D6_11": {
     "description_ru": "Туалет мужской",
     "description_en": "Men's toilet"
   },
   "D6_12": {
-    "number": "146",
-    "description_ru": "Учебно-научная лаборатория Трибомехатроника",
-    "description_en": "Tribomechatronics Educational and Scientific Laboratory"
+    "number": "146"
   },
   "D6_13": {
-    "number": "147",
-    "description_ru": "Заведующий кафедрой",
-    "description_en": "Head of the Department"
+    "number": "147"
   },
   "D6_14": {
-    "number": "148",
-    "description_ru": "Экспериментальный участок",
-    "description_en": "Experimental area"
+    "number": "148"
   },
   "D6_15": {
-    "number": "150",
-    "description_ru": "Отдел организации и контроля",
-    "description_en": "Department of Organization and Control"
+    "number": "150"
   },
   "D6_16": {
-    "number": "151",
-    "description_ru": "Зав. кафедрой",
-    "description_en": "Head of the Department"
+    "number": "151"
   },
   "D6_17": {
     "description_ru": "Туалет для инвалидов",
-    "description_en": "Toilet for the disabled"
+    "description_en": "Disabled toilet"
   },
   "D6_18": {
-    "number": "153",
-    "description_ru": "Касса",
-    "description_en": "Cash"
+    "number": "153"
   },
   "D7_0": {
-    "number": "110",
-    "description_ru": "Проблемная научно-исследовательская",
-    "description_en": "Problematic scientific research"
+    "number": "110"
   },
   "D7_1": {
-    "number": "111",
-    "description_ru": "Лаборатория",
-    "description_en": "Laboratory"
+    "number": "111"
   },
   "D7_2": {
     "description_ru": "Буфет",
     "description_en": "Buffet"
   },
   "D10_0": {
-    "number": "136",
-    "description_ru": "Преподавательская",
-    "description_en": "Teaching staff"
+    "number": "136"
   },
   "D10_1": {
-    "number": "115",
-    "description_ru": "Преподавательская",
-    "description_en": "Teaching staff"
+    "number": "115"
   },
   "D11_0": {
-    "number": "133",
-    "description_ru": "Помещение для ремонта и хранения инвентаря",
-    "description_en": "A room for repair and storage of inventory"
+    "number": "133"
   },
   "D11_1": {
     "number": "132",
@@ -133,7 +91,7 @@
   "D12_0": {
     "number": "131",
     "description_ru": "Раздевалка",
-    "description_en": "Cloakroom"
+    "description_en": "Locker room"
   },
   "D12_1": {
     "number": "130"
@@ -176,24 +134,16 @@
     "number": "128"
   },
   "D14_0": {
-    "number": "192",
-    "description_ru": "Пост охраны",
-    "description_en": "Guard post"
+    "number": "192"
   },
   "D14_1": {
-    "number": "182",
-    "description_ru": "Сектор информационных коммуникаций",
-    "description_en": "Information Communications sector"
+    "number": "182"
   },
   "D14_2": {
-    "number": "179",
-    "description_ru": "Электрощитовая",
-    "description_en": "Electrical panel"
+    "number": "179"
   },
   "D14_3": {
-    "number": "183",
-    "description_ru": "Сектор информационных коммуникаций",
-    "description_en": "Information Communications sector"
+    "number": "183"
   },
   "D15_0": {
     "number": "184"
@@ -208,7 +158,7 @@
   "D16_0": {
     "number": "154а",
     "description_ru": "Туалет служебный",
-    "description_en": "Office toilet"
+    "description_en": "Staff toilet"
   },
   "D16_1": {
     "number": "154",
@@ -216,47 +166,31 @@
     "description_en": "Women's toilet"
   },
   "D16_2": {
-    "number": "155",
-    "description_ru": "Научные сотрудники",
-    "description_en": "Scientific staff"
+    "number": "155"
   },
   "D16_3": {
-    "number": "156",
-    "description_ru": "Лекционная аудитория",
-    "description_en": "Lecture hall"
+    "number": "156"
   },
   "D16_4": {
-    "number": "157",
-    "description_ru": "Начальник управления",
-    "description_en": "Head of the Department"
+    "number": "157"
   },
   "D16_5": {
-    "number": "158",
-    "description_ru": "Прораб электротехнической службы",
-    "description_en": "Foreman of the electrical service"
+    "number": "158"
   },
   "D16_6": {
     "number": "159"
   },
   "D16_7": {
-    "number": "160",
-    "description_ru": "Отдел мониторинга и статистической отчетности",
-    "description_en": "Department of Monitoring and Statistical Reporting"
+    "number": "160"
   },
   "D16_8": {
-    "number": "161",
-    "description_ru": "Отдел по управлению имущественным комплексам",
-    "description_en": "Property Complex Management Department"
+    "number": "161"
   },
   "D16_9": {
-    "number": "162",
-    "description_ru": "Начальник бюро переводов",
-    "description_en": "Head of the translation Agency"
+    "number": "162"
   },
   "D16_10": {
-    "number": "163",
-    "description_ru": "Отдел организации научных мероприятий и академического развития",
-    "description_en": "Department of Organization of Scientific events and Academic Development"
+    "number": "163"
   },
   "D16_11": {
     "number": "164",
@@ -264,104 +198,64 @@
     "description_en": "Translation agency"
   },
   "D16_12": {
-    "number": "165",
-    "description_ru": "Директор",
-    "description_en": "Director"
+    "number": "165"
   },
   "D16_13": {
-    "number": "166",
-    "description_ru": "Начальник отдела",
-    "description_en": "Head of Department"
+    "number": "166"
   },
   "D16_14": {
-    "number": "167",
-    "description_ru": "Научно-исследовательская лаборатория 'Функциональные наноструктуры'",
-    "description_en": "Research Laboratory 'Functional Nanostructures'"
+    "number": "167"
   },
   "D16_15": {
-    "number": "168",
-    "description_ru": "Центр трансфера и коммерциализации технологий",
-    "description_en": "Technology Transfer and Commercialization Center"
+    "number": "168"
   },
   "D16_16": {
-    "number": "169",
-    "description_ru": "Отдел организационного сопровождения НИР",
-    "description_en": "Department of organizational support for Research and Development"
+    "number": "169"
   },
   "D16_17": {
-    "number": "170",
-    "description_ru": "Отдел перспективного развития научных исследований",
-    "description_en": "Department of Advanced Development of Scientific Research"
+    "number": "170"
   },
   "D16_18": {
-    "number": "171",
-    "description_ru": "Финансово-экономический отдел",
-    "description_en": "Finance and Economics Department"
+    "number": "171"
   },
   "D16_19": {
-    "number": "172",
-    "description_ru": "Начальник управления",
-    "description_en": "Head of the Department"
+    "number": "172"
   },
   "D16_20": {
-    "number": "173",
-    "description_ru": "Компьютерная аудитория",
-    "description_en": "Computer audience"
+    "number": "173"
   },
   "D16_21": {
-    "number": "174",
-    "description_ru": "Проектный офис",
-    "description_en": "Project Office"
+    "number": "174"
   },
   "D16_22": {
-    "number": "175",
-    "description_ru": "Заведующий кафедрой",
-    "description_en": "Head of the Department"
+    "number": "175"
   },
   "D16_23": {
-    "number": "176",
-    "description_ru": "Лаборатория функциональной диагностики",
-    "description_en": "Laboratory of functional Diagnostics"
+    "number": "176"
   },
   "D16_24": {
-    "number": "177",
-    "description_ru": "Начальник хозяйственной службы учебного корпуса №11",
-    "description_en": "Chief of the economic service of the educational building No. 11"
+    "number": "177"
   },
   "D16_25": {
-    "number": "178",
-    "description_ru": "Начальник",
-    "description_en": "Chief"
+    "number": "178"
   },
   "D19_0": {
-    "number": "102л",
-    "description_ru": "Лаборатория обработки металлов давлением",
-    "description_en": "Metal Pressure Treatment Laboratory"
+    "number": "102л"
   },
   "D19_1": {
-    "number": "103л",
-    "description_ru": "Лаборатория Электромонтаж",
-    "description_en": "Electrical Installation Laboratory"
+    "number": "103л"
   },
   "D19_2": {
-    "number": "107л",
-    "description_ru": "Лаборатория 'Технологии макаронных и кондитерских изделий'",
-    "description_en": "Laboratory of Pasta and Confectionery Technology"
+    "number": "107л"
   },
   "D19_3": {
-    "number": "108л",
-    "description_ru": "Лаборатория 'Биологии и биотехнологии пищевых продуктов'",
-    "description_en": "Laboratory of Biology and Biotechnology of Food Products"
+    "number": "108л"
   },
   "D19_4": {
-    "number": "109л",
-    "description_ru": "Лекционная аудитория 'Моделирование и оптимизация технологических процессов производства пищевых продуктов'",
-    "description_en": "Lecture hall 'Modeling and optimization of technological processes of food production'"
+    "number": "109л"
   },
   "D19_5": {
-    "number": "110л",
-    "description_ru": "Лаборатория 'Технологии продуктов питания животного происхождения'",
-    "description_en": "Laboratory of Animal Food Technology"
+    "number": "110л"
   },
   "D19_6": {
     "number": "111л",
@@ -373,114 +267,340 @@
     "description_en": "No information"
   },
   "D19_8": {
-    "number": "114л",
-    "description_ru": "Помещение для хранения и профилактического обслуживания учебного оборудования",
-    "description_en": "A room for storage and preventive maintenance of educational equipment"
+    "number": "114л"
   },
   "D19_9": {
-    "number": "115л",
-    "description_ru": "Архив",
-    "description_en": "Archive"
+    "number": "115л"
   },
   "D19_10": {
-    "number": "118л",
-    "description_ru": "Лаборатория 'Технологии хлебобулочных изделий'",
-    "description_en": "Bakery Products Technology Laboratory"
+    "number": "118л"
   },
   "D19_11": {
-    "number": "119л",
-    "description_ru": "Лаборатория технологии конструкционных материалов",
-    "description_en": "Laboratory of Structural Materials Technology"
+    "number": "119л"
   },
   "D19_12": {
     "description_ru": "Нет информации",
     "description_en": "No information"
   },
   "D19_13": {
-    "number": "120л",
-    "description_ru": "Лаборатория",
-    "description_en": "Laboratory"
+    "number": "120л"
   },
   "D19_14": {
-    "number": "121л",
-    "description_ru": "Лаборатория",
-    "description_en": "Laboratory"
+    "number": "121л"
   },
   "D19_15": {
-    "number": "122л",
-    "description_ru": "Лаборатория",
-    "description_en": "Laboratory"
+    "number": "122л"
   },
   "D19_16": {
-    "number": "123л",
-    "description_ru": "Лаборатория",
-    "description_en": "Laboratory"
+    "number": "123л"
   },
   "D19_17": {
-    "number": "124л",
-    "description_ru": "Лаборатория",
-    "description_en": "Laboratory"
+    "number": "124л"
   },
   "D19_18": {
-    "number": "125л",
-    "description_ru": "Лаборатория",
-    "description_en": "Laboratory"
+    "number": "125л"
   },
   "D19_19": {
     "description_ru": "Техническое помещение",
     "description_en": "Technical room"
   },
   "D19_20": {
-    "number": "128л",
-    "description_ru": "Инжиниринговый центр технологий цифровой среды для обеспечения комплексной безопасности: телекоммуникации, средства связи и энергоэффективности",
-    "description_en": "Engineering Center for Digital Environment Technologies for Integrated Security: telecommunications, communications and energy efficiency"
+    "number": "128л"
   },
   "D19_21": {
     "description_ru": "Нет информации",
     "description_en": "No information"
   },
   "D19_22": {
-    "number": "128л",
-    "description_ru": "Инжиниринговый центр технологий цифровой среды для обеспечения комплексной безопасности: телекоммуникации, средства связи и энергоэффективности",
-    "description_en": "Engineering Center for Digital Environment Technologies for Integrated Security: telecommunications, communications and energy efficiency"
+    "number": "128л"
   },
   "D19_23": {
     "description_ru": "Нет информации",
     "description_en": "No information"
   },
   "D19_24": {
-    "number": "134л",
-    "description_ru": "Лаборатория смесеприготовительная",
-    "description_en": "Mixing laboratory"
+    "number": "134л"
   },
   "D23_0": {
-    "number": "128ла",
-    "description_ru": "Лаборатория сварочных",
-    "description_en": "Welding Laboratory"
+    "number": "128ла"
   },
   "D23_1": {
-    "number": "140л",
-    "description_ru": "Лаборатория оборудования и технологии полимеров",
-    "description_en": "Laboratory of Polymer Equipment and Technology"
+    "number": "140л"
   },
   "D23_2": {
-    "number": "142л",
-    "description_ru": "Лаборатория 'Товароведение и экспертиза непродовольственных товаров'",
-    "description_en": "Laboratory of Commodity Science and expertise of non-food products"
+    "number": "142л"
   },
   "D23_3": {
-    "number": "143л",
-    "description_ru": "Лаборатория 'Товароведение и экспертиза товаров'",
-    "description_en": "Commodity Science and Product Expertise Laboratory"
+    "number": "143л"
   },
   "D23_4": {
-    "number": "144л",
-    "description_ru": "Препараторская",
-    "description_en": "Preparatorskaya"
+    "number": "144л"
   },
   "D23_5": {
-    "number": "145л",
-    "description_ru": "Инженерная",
-    "description_en": "Engineering"
+    "number": "145л"
+  },
+  "D29_0": {
+    "description_ru": "Центр эстетического воспитания",
+    "description_en": "Aesthetic Education Center"
+  },
+  "D29_1": {
+    "description_ru": "Центр эстетического образования",
+    "description_en": "Center for Culture and Aesthetic Education"
+  },
+  "D29_2": {
+    "description_ru": "Актовый зал",
+    "description_en": "Assembly hall"
+  },
+  "D29_3": {
+    "description_ru": "Операторская",
+    "description_en": "Operator's room"
+  },
+  "D30_0": {
+    "number": "227"
+  },
+  "D30_1": {
+    "number": "226"
+  },
+  "D30_2": {
+    "number": "225"
+  },
+  "D30_3": {
+    "number": "224"
+  },
+  "D30_4": {
+    "number": "223"
+  },
+  "D30_5": {
+    "number": "222"
+  },
+  "D30_6": {
+    "number": "221"
+  },
+  "D30_7": {
+    "number": "220"
+  },
+  "D30_8": {
+    "number": "218",
+    "description_ru": "Мужской туалет",
+    "description_en": "Men's toilet"
+  },
+  "D30_9": {
+    "number": "219",
+    "description_ru": "Женский туалет",
+    "description_en": "Women's toilet"
+  },
+  "D30_10": {
+    "number": "210"
+  },
+  "D30_11": {
+    "number": "209"
+  },
+  "D30_12": {
+    "number": "208"
+  },
+  "D30_13": {
+    "number": "207"
+  },
+  "D30_14": {
+    "number": "206"
+  },
+  "D30_15": {
+    "number": "205"
+  },
+  "D30_16": {
+    "number": "204"
+  },
+  "D30_17": {
+    "number": "203"
+  },
+  "D30_18": {
+    "number": "202"
+  },
+  "D30_19": {
+    "number": "201"
+  },
+  "D30_20": {
+    "number": "200"
+  },
+  "D31_0": {
+    "number": "211"
+  },
+  "D31_1": {
+    "number": "212"
+  },
+  "D31_2": {
+    "description_ru": "Центр междисциплинарного инжиринга",
+    "description_en": "Interdisciplinary Engineering Center"
+  },
+  "D31_3": {
+    "number": "213"
+  },
+  "D33_0": {
+    "number": "228",
+    "description_ru": "Мужской туалет",
+    "description_en": "Men's toilet"
+  },
+  "D33_1": {
+    "number": "229"
+  },
+  "D33_2": {
+    "number": "230"
+  },
+  "D33_3": {
+    "number": "232"
+  },
+  "D33_4": {
+    "number": "234"
+  },
+  "D33_5": {
+    "number": "236"
+  },
+  "D33_6": {
+    "number": "240"
+  },
+  "D33_7": {
+    "number": "241"
+  },
+  "D33_8": {
+    "number": "242"
+  },
+  "D33_9": {
+    "number": "243"
+  },
+  "D33_10": {
+    "number": "244"
+  },
+  "D33_11": {
+    "number": "245"
+  },
+  "D33_12": {
+    "number": "250"
+  },
+  "D33_13": {
+    "number": "251"
+  },
+  "D33_14": {
+    "number": "252"
+  },
+  "D33_15": {
+    "number": "253"
+  },
+  "D33_16": {
+    "number": "254"
+  },
+  "D33_17": {
+    "number": "255"
+  },
+  "D33_18": {
+    "number": "256"
+  },
+  "D33_19": {
+    "number": "257"
+  },
+  "D33_20": {
+    "number": "258"
+  },
+  "D35_0": {
+    "number": "201л"
+  },
+  "D35_1": {
+    "number": "202л"
+  },
+  "D35_2": {
+    "number": "203л"
+  },
+  "D35_3": {
+    "number": "204л"
+  },
+  "D35_4": {
+    "number": "206л"
+  },
+  "D35_5": {
+    "number": "207л"
+  },
+  "D35_6": {
+    "number": "208л"
+  },
+  "D35_7": {
+    "number": "209л"
+  },
+  "D35_8": {
+    "number": "210л",
+    "description_ru": "Женский туалет",
+    "description_en": "Women's toilet"
+  },
+  "D35_9": {
+    "number": "217л"
+  },
+  "D35_10": {
+    "number": "218л"
+  },
+  "D35_11": {
+    "number": "219л"
+  },
+  "D35_12": {
+    "number": "220л"
+  },
+  "D35_13": {
+    "number": "221л"
+  },
+  "D35_14": {
+    "number": "223л"
+  },
+  "D35_15": {
+    "number": "224л"
+  },
+  "D35_16": {
+    "number": "225л"
+  },
+  "D35_17": {
+    "number": "226л"
+  },
+  "D35_18": {
+    "number": "227л"
+  },
+  "D35_19": {
+    "number": "228л"
+  },
+  "D35_20": {
+    "description_ru": "Нет информации",
+    "description_en": "No information"
+  },
+  "D35_21": {
+    "number": "229л"
+  },
+  "D35_22": {
+    "number": "230л"
+  },
+  "D35_23": {
+    "description_ru": "Нет информации",
+    "description_en": "No information"
+  },
+  "D35_24": {
+    "number": "233л"
+  },
+  "D35_25": {
+    "number": "234л"
+  },
+  "D35_26": {
+    "number": "235л"
+  },
+  "D35_27": {
+    "number": "236л"
+  },
+  "D35_28": {
+    "number": "237л"
+  },
+  "D35_29": {
+    "number": "238л"
+  },
+  "D35_30": {
+    "number": "239л"
+  },
+  "D35_31": {
+    "number": "240л"
+  },
+  "D36_0": {
+    "number": "232л"
   }
 }
